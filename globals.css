@@ -1,0 +1,238 @@
+/* ===================================================== */
+/* NAVBAR */
+/* ===================================================== */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+
+  z-index:999;
+
+  background:rgba(7,17,32,0.75);
+
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-wrapper{
+  height:88px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.navbar-logo{
+  font-size:28px;
+  font-weight:800;
+
+  letter-spacing:1px;
+}
+
+.desktop-menu{
+  display:flex;
+  align-items:center;
+  gap:38px;
+}
+
+.desktop-menu a{
+  color:#dbe4f0;
+
+  font-size:16px;
+  font-weight:500;
+
+  transition:0.3s;
+}
+
+.desktop-menu a:hover{
+  color:white;
+}
+
+.navbar-btn{
+  background:linear-gradient(to right,#2563eb,#3b82f6);
+
+  color:white;
+
+  border:none;
+
+  padding:14px 24px;
+
+  border-radius:12px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.navbar-btn:hover{
+  transform:translateY(-2px);
+}
+
+.mobile-menu-btn{
+  display:none;
+
+  background:none;
+  border:none;
+
+  color:white;
+
+  font-size:34px;
+
+  cursor:pointer;
+}
+
+/* ===================================================== */
+/* MOBILE MENU */
+/* ===================================================== */
+
+.mobile-menu{
+  display:none;
+}
+
+/* ===================================================== */
+/* HERO SECTION */
+/* ===================================================== */
+
+.hero-section{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+
+  padding-top:120px;
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.hero-badge{
+  display:inline-block;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  background:rgba(37,99,235,0.15);
+
+  border:1px solid rgba(59,130,246,0.25);
+
+  color:#bfdbfe;
+
+  font-size:15px;
+  font-weight:600;
+
+  margin-bottom:28px;
+}
+
+.hero-title{
+  font-size:82px;
+  line-height:1.05;
+  font-weight:900;
+
+  margin-bottom:28px;
+}
+
+.hero-title span{
+  background:linear-gradient(to right,#60a5fa,#2563eb);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-description{
+  max-width:700px;
+
+  font-size:20px;
+  line-height:1.9;
+
+  color:#94a3b8;
+
+  margin-bottom:42px;
+}
+
+.hero-buttons{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+/* ===================================================== */
+/* MOBILE RESPONSIVE */
+/* ===================================================== */
+
+@media(max-width:992px){
+
+  .desktop-menu{
+    display:none;
+  }
+
+  .navbar-btn{
+    display:none;
+  }
+
+  .mobile-menu-btn{
+    display:block;
+  }
+
+  .mobile-menu{
+    display:flex;
+    flex-direction:column;
+
+    gap:24px;
+
+    padding:30px 24px;
+
+    background:#081120;
+
+    border-top:1px solid rgba(255,255,255,0.05);
+  }
+
+  .mobile-menu a{
+    font-size:18px;
+    font-weight:600;
+
+    color:white;
+  }
+
+  .mobile-btn{
+    margin-top:10px;
+  }
+
+  .hero-title{
+    font-size:58px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hero-section{
+    text-align:center;
+  }
+
+  .hero-content{
+    max-width:100%;
+  }
+
+  .hero-title{
+    font-size:42px;
+    line-height:1.15;
+  }
+
+  .hero-description{
+    font-size:17px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+}
